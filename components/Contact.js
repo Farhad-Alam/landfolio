@@ -72,6 +72,7 @@ const Contact = () => {
                 <h2 className="text-lg font-semibold">{item.title}</h2>
                 <p>{item.name}</p>
                 <a
+                  rel="noreferrer"
                   className="text-[#5DE6DE] text-sm"
                   target="_blank"
                   href={item.link}

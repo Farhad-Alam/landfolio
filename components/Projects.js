@@ -114,7 +114,7 @@ const Projects = ({ token }) => {
                 >
                   Info
                 </button>
-                <a target="_blank" href={item.url}>
+                <a rel="noreferrer" target="_blank" href={item.url}>
                   <a className="rightBtn rounded-lg">Live Demo</a>
                 </a>
               </div>

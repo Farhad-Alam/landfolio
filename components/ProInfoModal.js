@@ -38,22 +38,22 @@ const ProInfoModal = ({ projects, id }) => {
               {/* Frontend */}
               <ul className="space-y-2 flex flex-col items-center">
                 <h2 className="font-semibold ">Frontend</h2>
-                {front.map((item) => (
-                  <li className="text-xs sm:text-sm">{item}</li>
+                {front.map((item,ind) => (
+                  <li key={ind} className="text-xs sm:text-sm">{item}</li>
                 ))}
               </ul>
               {/* Backend */}
               <ul className="space-y-2 flex flex-col items-center">
                 <h2 className="font-semibold ">Backend</h2>
-                {back.map((item) => (
-                  <li className="text-xs sm:text-sm">{item}</li>
+                {back.map((item,ind) => (
+                  <li key={ind} className="text-xs sm:text-sm">{item}</li>
                 ))}
               </ul>
               {/* Others */}
               <ul className="space-y-2 flex flex-col items-center">
                 <h2 className="font-semibold ">Others</h2>
-                {others.map((item) => (
-                  <li className="text-xs sm:text-sm">{item}</li>
+                {others.map((item,ind) => (
+                  <li key={ind} className="text-xs sm:text-sm">{item}</li>
                 ))}
               </ul>
             </div>
