@@ -21,11 +21,11 @@ const Projects = ({ token }) => {
     setShow(true);
     setId(value);
   };
-
+  console.log(process.env.BASE_URL);
   useEffect(() => {
     const unsub = async () => {
       const { data } = await axios.get(
-        `http://localhost:3000/api/user/me?page=${page}&category=${category}`
+        `${process.env.BASE_URL}/api/user/me?page=${page}&category=${category}`
       );
       setProjects(data.project);
     };

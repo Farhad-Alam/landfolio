@@ -15,7 +15,7 @@ const Contact = () => {
     try {
       e.preventDefault();
       const { data } = await axios.post(
-        "http://localhost:3000/api/contact",
+         `${process.env.BASE_URL}/api/contact`,
         {
           name,
           email,
