@@ -4,6 +4,36 @@ import { AiOutlineProject } from "react-icons/ai";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { RiMessengerFill } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { BiHome } from "react-icons/bi";
+import { FiBookOpen, FiLifeBuoy } from "react-icons/fi";
+import { VscProject } from "react-icons/vsc";
+import { IoSchoolSharp } from "react-icons/io5";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
+
+export const navData = [
+  {
+    icon: <BiHome size={32} className="navBtn" />,
+    title: "home",
+  },
+  {
+    icon: <FiBookOpen size={32} className="navBtn" />,
+    title: "about",
+  },
+  {
+    icon: <IoSchoolSharp size={32} className="navBtn" />,
+    title: "experience",
+  },
+  {
+    icon: <MdOutlineMiscellaneousServices size={32} className="navBtn" />,
+
+    title: "projects",
+  },
+  {
+    icon: <VscProject size={32} className="navBtn" />,
+
+    title: "contact",
+  },
+];
 
 export const aboutData = [
   {

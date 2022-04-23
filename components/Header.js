@@ -7,7 +7,10 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="h-screen relative flex flex-col space-y-8 md:space-y-10 justify-center items-center">
+    <header
+      id="home"
+      className="h-screen relative flex flex-col space-y-8 md:space-y-10 justify-center items-center"
+    >
       {/* Top */}
       <div>
         <div className="text-white space-y-4 text-sm md:text-base">
@@ -44,7 +47,9 @@ const Header = () => {
         </div>
         <div className="text-white font-Popins mt-8">
           <button className="leftBtn">Hire Me</button>
-          <a href="#contact" className="rightBtn">Let's Talk</a>
+          <a href="#contact" className="rightBtn">
+            Let's Talk
+          </a>
         </div>
       </div>
       {/* Bottom */}
@@ -52,7 +57,7 @@ const Header = () => {
         whileInView={{
           scale: [0.8, 1],
           opacity: [0, 1],
-          transition: { duration: .8 },
+          transition: { duration: 0.8 },
         }}
         className="cssGlass  rounded-tl-full rounded-tr-full pt-5 px-2"
       >
