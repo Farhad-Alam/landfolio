@@ -1,6 +1,5 @@
 import nc from "next-connect";
 import { isAuthenticated } from "../../../middleware/auth";
-import { User } from "../../../models/User";
 import { connectDB } from "../../../utils/db";
 import cloudinary from "cloudinary";
 import { cloud } from "../../../utils/cloud";
