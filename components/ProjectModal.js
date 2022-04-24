@@ -51,7 +51,7 @@ const ProjectModal = ({ token }) => {
       setLoading(true);
       e.preventDefault();
       const { data } = await axios.put(
-        "http://localhost:3000/api/admin/update",
+        `${process.env.BASE_URL}api/admin/update`,
         {
           url,
           title,
