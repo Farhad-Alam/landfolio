@@ -10,6 +10,8 @@ connectDB();
 handler.get(async (req, res) => {
   try {
     const resultPerPage = 4;
+    const productsCount = await Project.find({}).countDocuments();
+
     const apifeature = new ApiFeature(Project.find(), req.query)
       .filter()
       .pagination(resultPerPage);
@@ -18,6 +20,8 @@ handler.get(async (req, res) => {
     res.status(200).json({
       success: true,
       project,
+      productsCount,
+      resultPerPage,
     });
   } catch (error) {
     res.status(500).json({

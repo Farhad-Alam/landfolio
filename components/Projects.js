@@ -9,6 +9,7 @@ import ProCat from "./ProCat";
 import { showState } from "../atoms/showAtom";
 import { useRecoilState } from "recoil";
 import ProInfoModal from "./ProInfoModal";
+import { AiOutlinePlus } from "react-icons/ai";
 
 const Projects = ({ token }) => {
   const [projects, setProjects] = useState([]);
@@ -16,6 +17,8 @@ const Projects = ({ token }) => {
   const [show, setShow] = useRecoilState(showState);
   const [id, setId] = useState("");
   const [page, setPage] = useState(1);
+  const [totalPage, setTotalPage] = useState();
+  const [resultPerPage, setResultPerPage] = useState();
 
   const handleOpen = (value) => {
     setShow(true);
@@ -28,6 +31,8 @@ const Projects = ({ token }) => {
         `${process.env.BASE_URL}/api/user/me?page=${page}&category=${category}`
       );
       setProjects(data.project);
+      setTotalPage(data.productsCount);
+      setResultPerPage(data.resultPerPage);
     };
     unsub();
   }, [category, page]);
@@ -46,6 +51,19 @@ const Projects = ({ token }) => {
         </p>
         <h1 className="text-gray-200 text-3xl font-Josefin">Projects</h1>
       </motion.div>
+
+      {/* Project Modal */}
+      {token.token && (
+        <button
+          className="absolute top-[6em] left-[50%] translate-x-[-50%]"
+          onClick={handleOpen}
+        >
+          <AiOutlinePlus
+            size={35}
+            className="p-1 rounded-lg bg-[#FC575E] scaleAnim text-white border border-[#FC575E]"
+          />
+        </button>
+      )}
       {/* Project Categories */}
       <ProCat setCategory={setCategory} />
 
@@ -127,16 +145,18 @@ const Projects = ({ token }) => {
 
       {/* Pagination */}
 
-      <div className="bg-white w-fit py-2 px-4 rounded-lg mx-auto mt-8">
-        <Pagination
-          page={page}
-          onChange={(event, value) => {
-            setPage(value);
-          }}
-          color="secondary"
-          count={2}
-        />
-      </div>
+      {resultPerPage < totalPage && (
+        <div className="bg-white w-fit py-2 px-4 rounded-lg mx-auto mt-8">
+          <Pagination
+            page={page}
+            onChange={(event, value) => {
+              setPage(value);
+            }}
+            color="secondary"
+            count={2}
+          />
+        </div>
+      )}
     </section>
   );
 };

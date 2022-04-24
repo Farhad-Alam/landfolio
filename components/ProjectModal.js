@@ -1,10 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Modal } from "@mui/material";
 import { GoDeviceCamera } from "react-icons/go";
-import Button from "@mui/material/Button";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
-import { AiOutlinePlus } from "react-icons/ai";
+
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -73,17 +72,6 @@ const ProjectModal = ({ token }) => {
   return (
     <div className="">
       {/* Modal for Add Projects */}
-      {token.token && (
-        <Button
-          className="absolute top-[6em] left-[50%] translate-x-[-50%]"
-          onClick={handleOpen}
-        >
-          <AiOutlinePlus
-            size={35}
-            className="p-1 rounded-lg bg-[#FC575E] scaleAnim text-white border border-[#FC575E]"
-          />
-        </Button>
-      )}
       <Modal
         open={open}
         onClose={handleClose}

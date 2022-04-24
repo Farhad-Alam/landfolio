@@ -9,7 +9,7 @@ const Nav = () => {
         <Link
           key={index}
           activeClass="navDiv"
-          className="navBtn"
+          className="navBtn scaleAnim"
           to={item.title}
           spy={true}
           smooth={true}
