@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Modal } from "@mui/material";
 import { GoDeviceCamera } from "react-icons/go";
+import Button from "@mui/material/Button";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
-
+import { AiOutlinePlus } from "react-icons/ai";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -21,7 +22,6 @@ const ProjectModal = ({ token }) => {
   const [others, setOthers] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   const handleImage = (e, val) => {
@@ -72,6 +72,8 @@ const ProjectModal = ({ token }) => {
   return (
     <div className="">
       {/* Modal for Add Projects */}
+
+      
       <Modal
         open={open}
         onClose={handleClose}

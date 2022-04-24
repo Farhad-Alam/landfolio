@@ -10,11 +10,13 @@ import { showState } from "../atoms/showAtom";
 import { useRecoilState } from "recoil";
 import ProInfoModal from "./ProInfoModal";
 import { AiOutlinePlus } from "react-icons/ai";
+import { modalState } from "../atoms/modalAtom";
 
 const Projects = ({ token }) => {
   const [projects, setProjects] = useState([]);
   const [category, setCategory] = useState("");
   const [show, setShow] = useRecoilState(showState);
+  const [open, setOpen] = useRecoilState(modalState);
   const [id, setId] = useState("");
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState();
@@ -24,6 +26,8 @@ const Projects = ({ token }) => {
     setShow(true);
     setId(value);
   };
+
+  const handleShow = () => setOpen(true);
 
   useEffect(() => {
     const unsub = async () => {
@@ -56,7 +60,7 @@ const Projects = ({ token }) => {
       {token.token && (
         <button
           className="absolute top-[6em] left-[50%] translate-x-[-50%]"
-          onClick={handleOpen}
+          onClick={handleShow}
         >
           <AiOutlinePlus
             size={35}
