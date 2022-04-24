@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,8 +23,9 @@ const Login = () => {
           },
         }
       );
-
       console.log(res);
+      toast.success(res.data.msg);
+      router.push("/");
     } catch (error) {
       toast.error(error.response.data.msg);
     }

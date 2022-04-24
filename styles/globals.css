@@ -27,7 +27,7 @@
     @apply bg-[#0D324D] scaleAnim text-sm md:text-base px-4 md:px-8 py-[.5rem] md:py-[.7rem] rounded-r-full duration-300 ease-in hover:bg-[#7EE8FA];
   }
   .navBtn {
-    @apply text-gray-50 p-[.5em];
+    @apply text-gray-50 p-[.2em];
   }
   .navDiv {
     @apply bg-[#7F53AC]  grid place-content-center rounded-full;

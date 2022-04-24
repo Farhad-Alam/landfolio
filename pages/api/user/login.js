@@ -43,7 +43,7 @@ handler.post(async (req, res) => {
         )
         .json({
           success: true,
-          user,
+          msg: "Login Successfully",
           token,
         });
     }

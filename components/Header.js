@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { BsFacebook } from "react-icons/bs";
 import { ImLinkedin } from "react-icons/im";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
@@ -47,9 +48,17 @@ const Header = () => {
         </div>
         <div className="text-white font-Popins mt-8">
           <button className="leftBtn">Hire Me</button>
-          <a href="#contact" className="rightBtn">
+
+          <ScrollLink
+            className="rightBtn"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
             Let's Talk
-          </a>
+          </ScrollLink>
         </div>
       </div>
       {/* Bottom */}

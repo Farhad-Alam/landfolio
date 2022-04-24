@@ -12,24 +12,24 @@ import { MdOutlineMiscellaneousServices } from "react-icons/md";
 
 export const navData = [
   {
-    icon: <BiHome size={32} className="navBtn" />,
+    icon: <BiHome size={25} className="navBtn" />,
     title: "home",
   },
   {
-    icon: <FiBookOpen size={32} className="navBtn" />,
+    icon: <FiBookOpen size={25} className="navBtn" />,
     title: "about",
   },
   {
-    icon: <IoSchoolSharp size={32} className="navBtn" />,
+    icon: <IoSchoolSharp size={25} className="navBtn" />,
     title: "experience",
   },
   {
-    icon: <MdOutlineMiscellaneousServices size={32} className="navBtn" />,
+    icon: <MdOutlineMiscellaneousServices size={25} className="navBtn" />,
 
     title: "projects",
   },
   {
-    icon: <VscProject size={32} className="navBtn" />,
+    icon: <VscProject size={25} className="navBtn" />,
 
     title: "contact",
   },

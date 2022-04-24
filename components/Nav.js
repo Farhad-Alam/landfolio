@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import React, { useState } from "react";
+import React from "react";
 import { navData } from "../data/data";
 
 const Nav = () => {
@@ -7,8 +7,9 @@ const Nav = () => {
     <div className="fixed flex items-center cssGlassNav px-6 md:px-10 rounded-full py-[.4rem] md:py-[.6rem] bottom-6 md:bottom-12 left-[50%] translate-x-[-50%] space-x-6 z-10">
       {navData.map((item, index) => (
         <Link
-          id={index}
+          key={index}
           activeClass="navDiv"
+          className="navBtn"
           to={item.title}
           spy={true}
           smooth={true}

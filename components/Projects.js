@@ -21,7 +21,7 @@ const Projects = ({ token }) => {
     setShow(true);
     setId(value);
   };
-  console.log(process.env.BASE_URL);
+
   useEffect(() => {
     const unsub = async () => {
       const { data } = await axios.get(

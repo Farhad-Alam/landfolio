@@ -1,6 +1,7 @@
 import React from "react";
 import { aboutData } from "../data/data";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -56,16 +57,25 @@ const About = () => {
               );
             })}
           </div>
-          <div className="flex lg:block space-y-8 flex-col justify-center items-center">
+          <div className="flex space-y-8 flex-col justify-center items-center lg:items-start">
             <p className="text-xs text-center md:text-left lg:w-[30rem] leading-[1.8rem]  tracking-wider sm:tracking-wide font-Popins ">
               I have been developing web apps for more than 2 years. Nowadays, I
               use React.Js as Next.Js, Scss, Bootstrap, TailwindCss,
-              Material-Ui, Redux, Redux-Toolkit for Frontend and NodeJs, ExpressJs, MongoDb,
-              Firebase for backend. I believe in pixel perfect design. I assure
-              you that I will provide clean code with even better performance.
-              You must be satisfied with my work.
+              Material-Ui, Redux, Redux-Toolkit for Frontend and NodeJs,
+              ExpressJs, MongoDb, Firebase for backend. I believe in pixel
+              perfect design. I assure you that I will provide clean code with
+              even better performance. You must be satisfied with my work.
             </p>
-            <a href="#contact" className="leftBtn rounded-xl">Let's Talk</a>
+            <Link
+              className="leftBtn rounded-xl"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              Let's Talk
+            </Link>
           </div>
         </motion.div>
       </div>
