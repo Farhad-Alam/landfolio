@@ -23,7 +23,7 @@ const Login = () => {
           },
         }
       );
-      console.log(res);
+
       toast.success(res.data.msg);
       router.push("/");
     } catch (error) {
