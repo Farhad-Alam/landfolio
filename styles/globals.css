@@ -1,0 +1,79 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Mulish:wght@200;300;400&family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Mulish:wght@200;300;400&family=Open+Sans:wght@300;400;500&family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400&family=Josefin+Sans:wght@100;200;300;400&family=Mulish:wght@200;300;400&family=Open+Sans:wght@300;400;500&family=Poppins:wght@100;200;300;400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main Css */
+@layer components {
+  section {
+    @apply pb-[10rem];
+  }
+  .scaleAnim {
+    @apply active:scale-90 duration-200 ease-in-out cursor-pointer;
+  }
+  .bodyColor {
+    @apply bg-gradient-to-br from-[#380036] to-[#0CBABA];
+  }
+  .leftBtn {
+    @apply bg-[#7EE8FA] scaleAnim text-sm md:text-base px-4 md:px-8 py-[.5rem] md:py-[.7rem] rounded-l-full duration-300 ease-in-out hover:bg-[#0D324D];
+  }
+  .rightBtn {
+    @apply bg-[#0D324D] scaleAnim text-sm md:text-base px-4 md:px-8 py-[.5rem] md:py-[.7rem] rounded-r-full duration-300 ease-in hover:bg-[#7EE8FA];
+  }
+  .navBtn {
+    @apply text-gray-50 p-[.2em];
+  }
+  .navDiv {
+    @apply bg-[#7F53AC]  grid place-content-center rounded-full;
+  }
+  .aboutDiv {
+    @apply shadow-[2px_1px_15px_1px_#A4508B] p-4 bg-gradient-to-tr rounded-xl nthChild flex flex-col last:items-end space-y-[.4em] from-[#5F0A87] to-[#A4508B] scaleAnim hover:from-[#A4508B] hover:to-[#5F0A87];
+  }
+  .conInp {
+    @apply outline-none p-4 sm:py-6 sm:px-8 w-full h-full border-[#537895] bg-transparent border-2 rounded-[1rem];
+  }
+  .modalBorder {
+    @apply tracking-wider after:content-[''] after:flex after:mx-auto after:w-16 after:h-[.2rem] after:mt-2 after:rounded-full after:bg-[#FF4E00];
+  }
+}
+
+/* Normal Css */
+html {
+  scroll-behavior: smooth;
+}
+.bodyCss {
+  background: #380036;
+  background-image: url("../public/images/bg-texture.png");
+}
+
+.cssGlass {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+.cssGlassNav {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+.nthChild:nth-child(2) {
+  text-align: center;
+}
